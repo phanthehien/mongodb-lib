@@ -1,5 +1,5 @@
 {
-  "name": "@jenius2/node-j2-mongo-models",
+  "name": "mongo-db-connector",
   "version": "0.1.0",
   "description": "A Seed project for jenius 2 npm packages",
   "main": "index.js",

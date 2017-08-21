@@ -50,10 +50,10 @@ describe('Plugin', () => {
         return done(err);
       }
 
-      expect(server.plugins['@jenius2/node-j2-mongo-models']).to.be.an('object');
-      expect(server.plugins['@jenius2/node-j2-mongo-models'].MongoModels).to.exist;
+      expect(server.plugins['mongo-db-connector']).to.be.an('object');
+      expect(server.plugins['mongo-db-connector'].MongoModels).to.exist;
 
-      server.plugins['@jenius2/node-j2-mongo-models'].MongoModels.disconnect();
+      server.plugins['mongo-db-connector'].MongoModels.disconnect();
 
       return done();
     });
@@ -78,10 +78,10 @@ describe('Plugin', () => {
         return done(err);
       }
 
-      expect(server.plugins['@jenius2/node-j2-mongo-models']).to.be.an('object');
-      expect(server.plugins['@jenius2/node-j2-mongo-models'].Dummy).to.exist;
+      expect(server.plugins['mongo-db-connector']).to.be.an('object');
+      expect(server.plugins['mongo-db-connector'].Dummy).to.exist;
 
-      server.plugins['@jenius2/node-j2-mongo-models'].MongoModels.disconnect();
+      server.plugins['mongo-db-connector'].MongoModels.disconnect();
 
       return done();
     });
@@ -105,10 +105,10 @@ describe('Plugin', () => {
         return done(err);
       }
 
-      expect(server.plugins['@jenius2/node-j2-mongo-models']).to.be.an('object');
-      expect(server.plugins['@jenius2/node-j2-mongo-models'].Dummy).to.exist;
+      expect(server.plugins['mongo-db-connector']).to.be.an('object');
+      expect(server.plugins['mongo-db-connector'].Dummy).to.exist;
 
-      server.plugins['@jenius2/node-j2-mongo-models'].MongoModels.disconnect();
+      server.plugins['mongo-db-connector'].MongoModels.disconnect();
 
       return done();
     });
@@ -138,10 +138,10 @@ describe('Plugin', () => {
           return done(err);
         }
 
-        expect(server.plugins['@jenius2/node-j2-mongo-models']).to.be.an('object');
-        expect(server.plugins['@jenius2/node-j2-mongo-models'].Dummy).to.exist;
+        expect(server.plugins['mongo-db-connector']).to.be.an('object');
+        expect(server.plugins['mongo-db-connector'].Dummy).to.exist;
 
-        server.plugins['@jenius2/node-j2-mongo-models'].MongoModels.disconnect();
+        server.plugins['mongo-db-connector'].MongoModels.disconnect();
 
         return done();
       });
@@ -171,10 +171,10 @@ describe('Plugin', () => {
           return done(err);
         }
 
-        expect(server.plugins['@jenius2/node-j2-mongo-models']).to.be.an('object');
-        expect(server.plugins['@jenius2/node-j2-mongo-models'].NoIndex).to.exist;
+        expect(server.plugins['mongo-db-connector']).to.be.an('object');
+        expect(server.plugins['mongo-db-connector'].NoIndex).to.exist;
 
-        server.plugins['@jenius2/node-j2-mongo-models'].MongoModels.disconnect();
+        server.plugins['mongo-db-connector'].MongoModels.disconnect();
 
         return done();
       });
@@ -197,9 +197,9 @@ describe('Plugin', () => {
       }
 
       return server.start((err) => {
-        expect(server.plugins['@jenius2/node-j2-mongo-models']).to.be.an('object');
-        expect(server.plugins['@jenius2/node-j2-mongo-models'].Dummy).to.exist;
-        server.plugins['@jenius2/node-j2-mongo-models'].MongoModels.disconnect();
+        expect(server.plugins['mongo-db-connector']).to.be.an('object');
+        expect(server.plugins['mongo-db-connector'].Dummy).to.exist;
+        server.plugins['mongo-db-connector'].MongoModels.disconnect();
         return done(err);
       });
     });
