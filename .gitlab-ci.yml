@@ -1,0 +1,27 @@
+variables:
+  HTTP_PROXY: http://10.1.72.56:3333
+  HTTPS_PROXY: http://10.1.72.56:3333
+
+before_script:
+  - npm config set proxy $HTTP_PROXY
+  - npm config set https-proxy $HTTPS_PROXY
+
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm install
+    - npm run test:coverage
+    - make integration-test
+
+deploy:
+  stage: deploy
+  script:
+    - npm publish --registry https://registry.npmjs.org/
+    - npm publish --registry http://nexus.devops.dev.corp.btpn.co.id/repository/npm-j2-lib//
+  only:
+    - /^v\d+.\d+.\d++$/                     # i.e. a semver tag
+

@@ -1,0 +1,8 @@
+# Settings which are required for BTPN builds.
+[url "https://"]
+   insteadOf = git://
+[url "http://"]
+   insteadOf = git://
+[url "http.sslVerify"]
+   http.sslVerify = false
+

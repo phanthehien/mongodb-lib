@@ -1,0 +1,53 @@
+{
+  "name": "@jenius2/node-j2-mongo-models",
+  "version": "0.1.0",
+  "description": "A Seed project for jenius 2 npm packages",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.10.0"
+  },
+  "scripts": {
+    "test": "mocha ./test/unit/**/*.spec.js",
+    "test:coverage": "nyc --report-dir ./artifacts/coverage --reporter=html --reporter=text --reporter=text-summary --reporter=lcov _mocha  ./test/unit/**/*.spec.js",
+    "lint": "eslint lib test",
+    "test:integration": "mocha ./test/integration --recursive",
+    "test:all:coverage": "nyc --report-dir ./artifacts/coverage --reporter=html --reporter=text --reporter=text-summary --reporter=lcov _mocha  ./test/**/*.spec.js",
+    "test:integration:debug": "mocha --debug-brk --inspect ./test/integration --recursive"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.ecommchannels.com/jenius2/seed-npm-module"
+  },
+  "keywords": [
+    "eslint",
+    "editorconfig",
+    "mocha",
+    "chai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@jenius2/j2-utils": "^0.2.1",
+    "async": "2.x.x",
+    "hoek": "4.x.x",
+    "joi": "10.x.x"
+  },
+  "peerDependencies": {
+    "mongodb": "2.x.x"
+  },
+  "devDependencies": {
+    "@jenius2/eslint-config-node": "^0.4.2",
+    "hapi": "15.x.x",
+    "chai": "^4.0.2",
+    "eslint": "^4.0.0",
+    "mocha": "^3.4.1",
+    "nyc": "^11.0.2",
+    "sinon": "^2.2.0",
+    "code": "4.x.x",
+    "lab": "13.x.x",
+    "mongodb": "2.x.x",
+    "opn-cli": "3.x.x",
+    "proxyquire": "1.x.x"
+  }
+}

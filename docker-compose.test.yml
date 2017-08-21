@@ -1,0 +1,9 @@
+version: '2'
+services:
+  mongodb:
+    image: jenius2/mongodb
+    environment:
+      LICENSE: accept
+    ports:
+      - 27017:27017
+
