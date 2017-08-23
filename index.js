@@ -30,10 +30,8 @@ exports.register = function (server, options, next) {
   });
 
   server.expose('addModel', addModel);
-
   server.expose('MongoModels', MongoModels);
-
-  server.ext('onPreStart', (serverObj, done) => {
+  server.ext('onPostStart', (serverObj, done) => {
 
     if (autoIndex) {
       Object.keys(models).forEach((key) => {
