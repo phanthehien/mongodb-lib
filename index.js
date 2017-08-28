@@ -49,11 +49,12 @@ exports.register = function (server, options, next) {
   .connect(mongodb.uri, mongodb.options)
   .then((db) => {
     server.log('Connect to MongoDB via MongoModels', db);
-    next();
+    // next();
   }).catch((err) => {
-    server.log('Error connecting to MongoDB via MongoModels.');
-    return next(err);
+    server.log('Error connecting to MongoDB via MongoModels.', err);
+    //return next(err);
   });
+  next();
 };
 
 
