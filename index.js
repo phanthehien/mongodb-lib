@@ -52,7 +52,7 @@ exports.register = function (server, options, next) {
     next();
   }).catch((err) => {
     server.log('Error connecting to MongoDB via MongoModels.', err);
-    next(err);
+    next();
   });
 };
 
